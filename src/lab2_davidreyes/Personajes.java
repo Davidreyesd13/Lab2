@@ -1,43 +1,93 @@
 package lab2_davidreyes;
 
-import java.util.ArrayList;
-
 public class Personajes {
-private ArrayList clerigo = new ArrayList();
-private ArrayList barbaro = new ArrayList();
-private ArrayList Mago = new ArrayList();
-private ArrayList picaro=new ArrayList();
 
-    public ArrayList getClerigo() {
-        return clerigo;
+    public Personajes(String tipo, String nombre, String Raza, double estatura, double peso, int edad, String descrip, String nacionalidad) {
+        this.tipo = tipo;
+        this.nombre = nombre;
+        this.Raza = Raza;
+        this.estatura = estatura;
+        this.peso = peso;
+        this.edad = edad;
+        this.descrip = descrip;
+        this.nacionalidad = nacionalidad;
+        
     }
     
-    public void setClerigo(ArrayList clerigo) {
-        this.clerigo = clerigo;
+private String tipo;
+private String nombre;
+private String Raza;
+private double estatura;
+private double peso;
+private int edad;
+private String descrip;
+private String nacionalidad;
+
+    public String getTipo() {
+        return tipo;
     }
 
-    public ArrayList getBarbaro() {
-        return barbaro;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public void setBarbaro(ArrayList barbaro) {
-        this.barbaro = barbaro;
+    public String getNombre() {
+        return nombre;
     }
 
-    public ArrayList getMago() {
-        return Mago;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setMago(ArrayList Mago) {
-        this.Mago = Mago;
+    public String getRaza() {
+        return Raza;
     }
 
-    public ArrayList getPicaro() {
-        return picaro;
+    public void setRaza(String Raza) {
+        this.Raza = Raza;
     }
 
-    public void setPicaro(ArrayList picaro) {
-        this.picaro = picaro;
+    public double getEstatura() {
+        return estatura;
     }
 
+    public void setEstatura(double estatura) {
+        this.estatura = estatura;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getDescrip() {
+        return descrip;
+    }
+
+    public void setDescrip(String descrip) {
+        this.descrip = descrip;
+    }
+
+    public String getNacionalidad() {
+        return nacionalidad;
+    }
+
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
+    }
+    @Override
+    public String toString(){
+        return "Personaje("+tipo+" "+nombre+" "+Raza+" "+estatura+" "+peso+" "+edad+" "+descrip+" "+nacionalidad+")";
+    }
 }

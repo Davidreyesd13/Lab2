@@ -77,7 +77,7 @@ public class Lab2_DavidReyes {
                         default:
                             System.out.println("Raza no valida");
                     }
-                    
+
                     System.out.println("Ingrese la estatura");
                     double estatura = leer.nextDouble();
                     System.out.println("Ingrese peso");
@@ -150,33 +150,81 @@ public class Lab2_DavidReyes {
                                 default:
                                     System.out.println("Personaje no existe");
                             }
-                            personajes.get(pos-1).setTipo(tipo);
+                            personajes.get(pos - 1).setTipo(tipo);
                             System.out.println("Cambio con exito");
                             break;
                         case 2:
                             System.out.println("Ingrese nombre: ");
-                    leer.nextLine();
-                    String nombre = leer.nextLine();
-                    
+                            leer.nextLine();
+                            String nombre = leer.nextLine();
+                            personajes.get(pos - 1).setNombre(nombre);
                             break;
                         case 3:
-                            
+                            System.out.println("Raza\n1.Mediano\n2.Elfo\n3.Enano\n4.Humano");
+                            int Razi = leer.nextInt();
+                            String raza = "";
+                            int Hp = 0;
+                            switch (Razi) {
+                                case 1:
+                                    raza = "Mediano";
+
+                                    break;
+                                case 2:
+                                    raza = "Elfo";
+                                    break;
+                                case 3:
+                                    raza = "Enano";
+                                    break;
+                                case 4:
+                                    raza = "Humano";
+                                    break;
+                                default:
+                                    System.out.println("Raza no valida");
+                            }
+                            personajes.get(pos - 1).setRaza(raza);
                             break;
                         case 4:
-                            
+                            System.out.println("Ingrese la estatura");
+                            double estatura = leer.nextDouble();
+                            personajes.get(pos - 1).setEstatura(estatura);
                             break;
                         case 5:
-                            
+                            System.out.println("Ingrese peso");
+                            double peso = leer.nextDouble();
+                            personajes.get(pos - 1).setPeso(peso);
                             break;
                         case 6:
-                            
+                            System.out.println("Ingrese edad");
+                            int edad = leer.nextInt();
+                            personajes.get(pos - 1).setEdad(edad);
                             break;
                         case 7:
-                            
+                            System.out.println("Ingrese descripcion");
+
+                            String descrip = leer.nextLine();
+                            personajes.get(pos - 1).setDescrip(descrip);
                             break;
                         case 8
-                                
-                                break;
+                            switch (nacion) {
+                                case 1:
+                                    nacionalidad = "Norfair";
+                                    break;
+                                case 2:
+                                    nacionalidad = "Brinstar";
+                                    break;
+                                case 3:
+                                    nacionalidad = "Maridia";
+                                    break;
+                                case 4:
+                                    nacionalidad = "Zebes";
+                                    break;
+                                case 5:
+                                    nacionalidad = "Crateri";
+                                default:
+                                    System.out.println("Opcion no valida");
+                            }
+                            personajes.get(pos-1).setNacionalidad(nacionalidad);
+                            break;
                         default:
                             throw new AssertionError();
                     }

@@ -1,14 +1,43 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package lab2_davidreyes;
 
-/**
- *
- * @author david
- */
+import java.util.ArrayList;
+
 public class Personajes {
+private ArrayList clerigo = new ArrayList();
+private ArrayList barbaro = new ArrayList();
+private ArrayList Mago = new ArrayList();
+private ArrayList picaro=new ArrayList();
+
+    public ArrayList getClerigo() {
+        return clerigo;
+    }
     
+    public void setClerigo(ArrayList clerigo) {
+        this.clerigo = clerigo;
+    }
+
+    public ArrayList getBarbaro() {
+        return barbaro;
+    }
+
+    public void setBarbaro(ArrayList barbaro) {
+        this.barbaro = barbaro;
+    }
+
+    public ArrayList getMago() {
+        return Mago;
+    }
+
+    public void setMago(ArrayList Mago) {
+        this.Mago = Mago;
+    }
+
+    public ArrayList getPicaro() {
+        return picaro;
+    }
+
+    public void setPicaro(ArrayList picaro) {
+        this.picaro = picaro;
+    }
+
 }

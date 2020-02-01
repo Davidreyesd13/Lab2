@@ -156,14 +156,13 @@ public class Lab2_DavidReyes {
                         case 2:
                             System.out.println("Ingrese nombre: ");
                             leer.nextLine();
-                            String nombre = leer.nextLine();
+                            nombre = leer.nextLine();
                             personajes.get(pos - 1).setNombre(nombre);
                             break;
                         case 3:
                             System.out.println("Raza\n1.Mediano\n2.Elfo\n3.Enano\n4.Humano");
-                            int Razi = leer.nextInt();
-                            String raza = "";
-                            int Hp = 0;
+                            Razi = leer.nextInt();
+                            raza = "";
                             switch (Razi) {
                                 case 1:
                                     raza = "Mediano";
@@ -185,26 +184,32 @@ public class Lab2_DavidReyes {
                             break;
                         case 4:
                             System.out.println("Ingrese la estatura");
-                            double estatura = leer.nextDouble();
+                            estatura = leer.nextDouble();
                             personajes.get(pos - 1).setEstatura(estatura);
                             break;
                         case 5:
                             System.out.println("Ingrese peso");
-                            double peso = leer.nextDouble();
+                            peso = leer.nextDouble();
                             personajes.get(pos - 1).setPeso(peso);
                             break;
                         case 6:
                             System.out.println("Ingrese edad");
-                            int edad = leer.nextInt();
+                            edad = leer.nextInt();
                             personajes.get(pos - 1).setEdad(edad);
                             break;
                         case 7:
                             System.out.println("Ingrese descripcion");
 
-                            String descrip = leer.nextLine();
+                            descrip = leer.nextLine();
                             personajes.get(pos - 1).setDescrip(descrip);
                             break;
                         case 8
+                            System.out.println("Ingrese nacionalidad\n1.Norfair"
+                                    + "\n2Brinstar\n3.Maridia"
+                                    + "\n4.Zebes"
+                                    + "\n5Crateri");
+                            nacion = leer.nextInt();
+                            nacionalidad = "";
                             switch (nacion) {
                                 case 1:
                                     nacionalidad = "Norfair";
@@ -223,7 +228,7 @@ public class Lab2_DavidReyes {
                                 default:
                                     System.out.println("Opcion no valida");
                             }
-                            personajes.get(pos-1).setNacionalidad(nacionalidad);
+                            personajes.get(pos - 1).setNacionalidad(nacionalidad);
                             break;
                         default:
                             throw new AssertionError();
